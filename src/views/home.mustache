@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src ="/public/script/script.js" ></script>
+    <title>entada/saida</title>
+</head>
+<body>  
+<div class ="mean">
+  {{#banner}}
+  <input id={{id}} type="text">
+  {{/banner}}
+    <div id="{{information}}"> 
+      <div class ="container">
+        <div class="conteudo"></div>
+        <div class="conteudo"></div>
+        <div class="conteudo"></div>
+      </div>
+    </div>
+  </div>
+   {{#banne}}
+<div class ="{{modal}}">
+     <div class ="container-x">
+        <div class="hidden">x</div>
+     </div>
+     <li class="link"><a href="/sainda">saida</a></li><hr>
+     <li class="link"><a href="/entrada">entrada</a></li><hr>
+     <li class="link"><a href="/">Todos</a></li>
+</div>
+{{/banne}}
+ <script>
+ let cont = 0
+ const ModalContainer =document.querySelector(".modal-container")
+ const container =document.querySelector(".container")
+   container.addEventListener("click" , function(){
+     ModalContainer.style.right = "30px"
+     
+   })
+ 
+ const containerX =document.querySelector(".container-x")
+   containerX.addEventListener("click" , function(){
+     ModalContainer.style.right = "-120px"
+     
+   })
+   
+  document.addEventListener("click", function(event) {
+  const ev = event.button
+    if (!container.contains(event.target)) {
+     ModalContainer.style.right = "-120px" 
+    }
+});
+    
+
+   </script>
+
+</body>
+</html>
